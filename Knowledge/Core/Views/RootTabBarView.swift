@@ -27,18 +27,21 @@ struct RootTabBarView: View {
     var body: some View {
         HStack(spacing: 0) {
             ForEach(items.indices, id: \.self) { index in
+                
                 // Whether the current item is selected or not.
                 let isSelected: Bool = index == selectedIndex
-                VStack {
+                
+                ZStack {
                     // The icon.
                     Image(systemName: items[index].asset)
-                        .font(.system(size: 20))
+                        .font(.system(size: 25))
                         .foregroundStyle(isSelected ? theme.color.primary : theme.color.onSurface)
                     
                     // The indicator.
                     RoundedRectangle(cornerRadius: theme.cornerRadius.large)
                         .frame(width: 15, height: 2)
                         .foregroundStyle(isSelected ? theme.color.secondary : .clear)
+                        .offset(x: 0, y: 18)
                     
                 }
                 .padding()
