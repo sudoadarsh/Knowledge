@@ -22,6 +22,8 @@ struct _AppColor: AppColor {
     var onSecondary: Color = Color(hex: 0xffffffff)
     var surface    : Color = Color(hex: 0xff34393b)
     var onSurface  : Color = Color(hex: 0xffffffff)
+    var hintText   : Color = Color(hex: 0xff808080)
+    var textField  : Color = Color(hex: 0xff292f30)
 }
 
 struct _AppSpacing: AppSpacing {

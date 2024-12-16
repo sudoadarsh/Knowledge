@@ -30,6 +30,12 @@ protocol AppColor {
     /// The surface color.
     var surface    : Color { get }
     var onSurface  : Color { get }
+    
+    /// The hintText color.
+    var hintText   : Color { get }
+    
+    /// The TextField fill color.
+    var textField  : Color { get }
 }
 
 /// The spacing to be used across the app.
